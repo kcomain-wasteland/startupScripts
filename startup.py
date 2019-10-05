@@ -12,6 +12,19 @@ warning = fo.YELLOW
 primary = fo.BLUE
 info = fo.CYAN
 r = fo.RESET
+
+def danger(textd):
+    print(dangerc+textd+r)
+
+def success(textd):
+    print(successc+textd+r)
+
+def warning(textd):
+    print(warningc+textd+r)
+
+def info(textd):
+    print(infoc+textd+r)
+
 # Load json File.
 try:
     json = open("C:\startup.json")
