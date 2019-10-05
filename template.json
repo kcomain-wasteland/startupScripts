@@ -1,0 +1,10 @@
+{
+    "Nadeko": {
+        "working": "C:\\Program Files\\NadekoBot",
+        "file": "start.bat"
+    },
+    "TWOW Bot": {
+        "working": "C:\\bots\\TWOWBot_S",
+        "file": "run.cmd"
+    }
+}
