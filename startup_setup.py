@@ -8,11 +8,6 @@ primaryc = fo.BLUE
 infoc = fo.CYAN
 r = fo.RESET
 
-global cfg
-cfg = "{\n"
-print('Welcome to the startup json setup.\n')
-print('Please fill in all the informations as they are all compulsory.')
-
 def addEntry():
     n = input('Name: ')
     wd = input('Working Directory: ')
@@ -38,17 +33,25 @@ def info(textd):
     print(infoc+textd+r)
 
 
+global cfg
+print('Welcome to the startup json setup.\n')
+print('Please fill in all the informations as they are all compulsory.')
+
+cfg = "{\n"
 cfg += addEntry()
-while True:
-    yn = input('Any more startup processes?[Y/N]: ')
-    print('yn: ' + yn)
-    if yn == 'y' or 'Y':
-        print('yes')
-        cfg += ',\n'
-        cfg += addEntry()
-    else:
-        break
-    yn = ''
+#while True:
+#    yn = input('Any more startup processes?[Y/N]: ')
+#    print('yn: ' + yn)
+#    if yn == 'y' or 'Y':
+#        print('yes')
+#        cfg += ',\n'
+#        cfg += addEntry()
+#    else:
+#        break
+#    yn = ''
+## Potential Workarounds.
+## G:\P\Python Projects\startup\wkar.py
+
 
 cfg += '\n}'
 print(cfg)
