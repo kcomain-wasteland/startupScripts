@@ -4,13 +4,14 @@ import json
 from colorama import Fore as fo
 from colorama import Style as st
 
+
 # Fore: BLACK, RED, GREEN, YELLOW, BLUE, MAGENTA, CYAN, WHITE, RESET.
-black = fo.BLACK
-danger = fo.RED
-success = fo.GREEN
-warning = fo.YELLOW
-primary = fo.BLUE
-info = fo.CYAN
+blackc = fo.BLACK
+dangerc = fo.RED
+successc = fo.GREEN
+warningc = fo.YELLOW
+primaryc = fo.BLUE
+infoc = fo.CYAN 
 r = fo.RESET
 
 def danger(textd):
@@ -27,8 +28,8 @@ def info(textd):
 
 # Load json File.
 try:
-    json = open("C:\startup.json")
-except FileNotFoundError:
+    conkf = open("autostartup.json")
+except FileNotFoundError: 
     print('No file found. Create one using startup_setup.py.')
     print('Press enter to exit.')
     void = input()
@@ -38,6 +39,9 @@ except:
     print('Press enter to exit.')
     void = input()
     exit(0)
+conkf.close()
 
-
-json.close()
+conk = conkf.read()
+print(conk)
+config = json.loads(conk)
+print('Config File:\n'+config)

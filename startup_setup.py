@@ -46,12 +46,8 @@ while True:
         print('yes')
         cfg += ',\n'
         cfg += addEntry()
-    elif yn == 'n' or 'N':
-        break
     else:
-        print('breaking')
         break
-
     yn = ''
 
 cfg += '\n}'
